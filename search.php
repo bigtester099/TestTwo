@@ -5,7 +5,7 @@
     if(isset($_REQUEST['q']))
     {
         $q = $_REQUEST['q'];
-        $query = mysqli_query($conn, "SELECT * FROM `words` WHERE `englishWord` LIKE '%".$q."%' OR `yupikWord` LIKE '%".$q."%'") or die(mysqli_error($conn)); 
+        $query = mysqli_query($conn, "SELECT * FROM `words` WHERE `englishWord` LIKE '%".$DGP."%' OR `yupikWord` LIKE '%".$DGP."%'") or die(mysqli_error($conn)); 
         $count = mysqli_num_rows($query);
         if($count == 0){
           $output = '<h2>No result found</h2>';
