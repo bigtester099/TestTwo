@@ -33,6 +33,12 @@
 								<label for="site-search">Search the site:</label>
 								<input type="search" id="site-search" name="DGP" aria-label="Search through site content">
 								<button>Search</button>
+								<script>
+									$.ajax({ type: "GET",
+									        url: 'search.php',
+									        success: function(data){ debugger $('#mymodal').modal('show');
+									        $('#mymodal:visible .modal-content .modal-body').html(e); } });
+								</script>
 							</div>
 						</form>
 					</center>
