@@ -1,10 +1,10 @@
 <?php
 
-    include_once('db.php'); //Connect to database
+    include_once('wordlist/Dword.csv'); //Connect to database
 
-    if(isset($_REQUEST['q']))
+    if(isset($_REQUEST['DGP']))
     {
-        $q = $_REQUEST['q'];
+        $DGP = $_REQUEST['DGP'];
         $query = mysqli_query($conn, "SELECT * FROM `words` WHERE `englishWord` LIKE '%".$DGP."%' OR `yupikWord` LIKE '%".$DGP."%'") or die(mysqli_error($conn)); 
         $count = mysqli_num_rows($query);
         if($count == 0){
